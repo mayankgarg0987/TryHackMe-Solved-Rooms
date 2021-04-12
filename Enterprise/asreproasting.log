@@ -1,0 +1,4 @@
+Impacket v0.9.23.dev1+20210309.140316.90b17109 - Copyright 2020 SecureAuth Corporation
+
+[*] Getting TGT for nik
+[-] Kerberos SessionError: KDC_ERR_WRONG_REALM(Reserved for future use)

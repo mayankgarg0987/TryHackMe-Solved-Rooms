@@ -1,0 +1,27 @@
+
+    __             __               __     
+   / /_____  _____/ /_  _______  __/ /____ 
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,< /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/                                        
+
+Version: dev (n/a) - 03/25/21 - Ronnie Flathers @ropnop
+
+2021/03/25 14:29:06 >  Using KDC(s):[0m
+2021/03/25 14:29:06 >  	10.10.194.216:88
+[0m
+[32m2021/03/25 14:29:18 >  [+] VALID USERNAME:	 banana@lab.enterprise.thm[0m
+[32m2021/03/25 14:29:31 >  [+] VALID USERNAME:	 guest@lab.enterprise.thm[0m
+[32m2021/03/25 14:30:25 >  [+] VALID USERNAME:	 administrator@lab.enterprise.thm[0m
+[32m2021/03/25 14:33:36 >  [+] VALID USERNAME:	 cake@lab.enterprise.thm[0m
+[32m2021/03/25 14:35:33 >  [+] VALID USERNAME:	 enterprise@lab.enterprise.thm[0m
+[32m2021/03/25 14:37:13 >  [+] VALID USERNAME:	 nik@lab.enterprise.thm[0m
+[32m2021/03/25 14:39:05 >  [+] VALID USERNAME:	 Guest@lab.enterprise.thm[0m
+[32m2021/03/25 14:39:09 >  [+] VALID USERNAME:	 Administrator@lab.enterprise.thm[0m
+[32m2021/03/25 14:48:08 >  [+] VALID USERNAME:	 Banana@lab.enterprise.thm[0m
+[32m2021/03/25 14:48:37 >  [+] VALID USERNAME:	 spooks@lab.enterprise.thm[0m
+[32m2021/03/25 14:53:06 >  [+] VALID USERNAME:	 joiner@lab.enterprise.thm[0m
+[32m2021/03/25 15:10:22 >  [+] VALID USERNAME:	 Nik@lab.enterprise.thm[0m
+[32m2021/03/25 15:10:47 >  [+] VALID USERNAME:	 GUEST@lab.enterprise.thm[0m
+[32m2021/03/25 15:11:07 >  [+] VALID USERNAME:	 BANANA@lab.enterprise.thm[0m
+2021/03/25 15:45:59 >  Done! Tested 100000 usernames (14 valid) in 4612.682 seconds[0m
