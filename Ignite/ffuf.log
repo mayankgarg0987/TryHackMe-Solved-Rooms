@@ -1,0 +1,40 @@
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v1.0.2
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://10.10.56.194/FUZZ
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200,204,301,302,307,401,403
+________________________________________________
+
+[2K# directory-list-2.3-medium.txt [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# Attribution-Share Alike 3.0 License. To view a copy of this  [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# license, visit http://creativecommons.org/licenses/by-sa/3.0/  [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K#                       [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K#                       [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# Copyright 2007 James Fisher [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# This work is licensed under the Creative Commons  [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K#                       [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# Priority ordered case sensative list, where entries were found  [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# or send a letter to Creative Commons, 171 Second Street,  [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# Suite 300, San Francisco, California, 94105, USA. [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K0                       [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K                        [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K#                       [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2K# on atleast 2 different hosts [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2Kassets                  [Status: 301, Size: 313, Words: 20, Lines: 10]
+[2Kindex                   [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2Khome                    [Status: 200, Size: 16595, Words: 770, Lines: 232]
+[2Koffline                 [Status: 200, Size: 70, Words: 8, Lines: 2]
+[2Kfuel                    [Status: 301, Size: 311, Words: 20, Lines: 10]

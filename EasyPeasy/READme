@@ -1,0 +1,14 @@
+ports-	
+	80 - http
+	65524 - http
+	6498 - ssh
+
+directory-bruteforce -
+	80 - nothing
+	65524 -	/hidden --> nothing
+		/hidden/whatever --> found first flag in source code
+		/robots.txt	-->	found hash - 'a18672860d0510e5ab6699730763b250'	-->	it is md5
+				--> cracked	-->	flag{1m_s3c0nd_fl4g}	-->	using online tool
+		/n0th1ng3ls3m4tt3r	-->	found hidden directory in source code on	-->	:65524
+					-->	found hash in source code	-->	940d71e8655ac41efb5f8ab850668505b86dd64186a66e57d1483e7f5fe6fd81	-->	cracked - mypasswordforthatjob
+		image found on that page has password	-->	extracted using steghide and passphrase as 'mypasswordforthatjob'	-->	got some binary and converted to ascii	-->	iconvertedmypasswordtobinary
