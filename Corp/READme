@@ -1,0 +1,4 @@
+* login via xfreerdp-
+	xfreerdp /u:username /p:password /v:<target ip>
+
+* transfer any binary file just to test whether that binary runs in a specified directory-	eg, nc.exe

