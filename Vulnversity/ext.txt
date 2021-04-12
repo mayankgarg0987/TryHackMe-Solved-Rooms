@@ -1,0 +1,7 @@
+.php
+.php1
+.php2
+.php3
+.php4
+.php5
+.phtml

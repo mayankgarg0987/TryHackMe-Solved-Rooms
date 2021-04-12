@@ -1,0 +1,13 @@
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://broadcast.vulnnet.thm/
+[+] Threads:        10
+[+] Wordlist:       ../../Web/Wordlists/directoryBruteForce/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2021/03/22 05:00:47 Starting gobuster
+===============================================================

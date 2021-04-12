@@ -1,0 +1,35 @@
+												!!!!		COMPLETED		!!!!
+
+nmap scan -	
+		80 - http
+		21 - ftp (anonymous login allowed)
+		2222 - ssh
+
+ftp anonymous login -
+		did basic enumeration
+		found -	
+*				'mitch' a normal user
+
+gobuster scan -
+*		/simple
+		website using a cms-
+*				CMS made simple		(SQL injection)
+*				run the script and found the password - 'secret'
+*				login ssh using these credentials - 		ssh mitch@machine_ip -p 2222
+*						username - mitch
+*						password - secret 
+
+user text - 
+		found easily
+
+priv esc -
+*		sudo -l 		to see what we can do with root privileges  		vim
+*		gtfobins
+*		sudo vim -c ':!/bin/sh'
+		run this command to get the root shell
+		and found the root flag
+
+
+
+user flag - G00d j0b, keep up!
+root flag - W3ll d0n3. You made it!
