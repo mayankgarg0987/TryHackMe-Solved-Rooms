@@ -4,7 +4,7 @@ This repo contains 'writeups' for the rooms I have completed om TryHackMe. <br>
 Writeups is in quotes because these are ugly. Doesn't contain screenshots, but just some text. <br>
 <br>
 
-<h3>Edited:
+<h3>Edited:<br>
 I went through the uploaded files and noticed that many of them have just the scan results :/<br>
 But now I have started writing good writeups. They now include screenshots as well. <br>
 </h3>
